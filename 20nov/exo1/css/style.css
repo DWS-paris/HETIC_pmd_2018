@@ -36,6 +36,10 @@ Layout
         margin: auto;
         padding: 4rem;
     }
+
+    .formError{
+        border-color: red;
+    }
 /*  */
 
 /* 
