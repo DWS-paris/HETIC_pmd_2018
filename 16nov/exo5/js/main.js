@@ -20,7 +20,7 @@ Opérateurs de comparaison
     console.log( !fifth ); // Invercer une valuer boolean
 
     console.log( ++first ); // Incrémenter de 1
-    console.log( --second );
+    console.log( --second ); // Décrémenter de 1
 //
 
 /* 

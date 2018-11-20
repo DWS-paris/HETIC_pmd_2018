@@ -42,7 +42,7 @@ Déclarer un objet user contenant firstName et lastName
 
     // Faire une boucle FOR IN sur les propriétés de l'objet
     for( let property in user ){
-        console.log(property);
-        console.log( user[property] );
+        console.log('Propriété :', property);
+        console.log( 'Valeur de la propriété :', user[property] );
     };
 //

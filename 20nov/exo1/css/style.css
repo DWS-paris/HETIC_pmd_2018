@@ -1,0 +1,49 @@
+/* 
+Reset
+*/
+    *{
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html{
+        font-size: 80%;
+    }
+
+    body{
+        font-size: 1.5rem;
+    }
+
+    a{
+        text-decoration: none;
+        color: inherit;
+        padding: 1rem;
+    }
+
+    ul{
+        list-style: none;
+    }
+/*  */
+
+/* 
+Layout
+*/
+    header, main, footer{
+        max-width: 50rem;
+        margin: auto;
+        padding: 4rem;
+    }
+/*  */
+
+/* 
+Nav
+*/
+    nav ul{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: flex;
+    }
+/*  */
