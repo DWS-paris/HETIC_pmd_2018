@@ -69,6 +69,7 @@ Gestion du formulaire
         let msgSubject = document.querySelector('[placeholder="Sujet"]');
         let msgEmail = document.querySelector('[placeholder="Email"]');
         let msgMessage = document.querySelector('[placeholder="Votre message"]');
+        let messageList = document.querySelector('form + ul');
 
         // Capter le submit du formulaire
         myForm.addEventListener( 'submit', (event) => {
@@ -109,8 +110,18 @@ Gestion du formulaire
             if( formError === 0 ){
                 console.log('Le formulaire est validé !');
 
-                // Envoyer les données...
+                // Afficher le message dans la liste
+                messageList.innerHTML += `
+                    <li>
+                        <h3>${msgSubject.value}</h3>
+                        <p>${msgMessage.value}</p>
+                        <p>${msgEmail.value}</p>
+                    </li>
+                `
                 // Vider le formulaire
+                msgEmail.value = ''
+                msgMessage.value = ''
+                msgSubject.value = ''
             }
         })
 

@@ -26,6 +26,13 @@ Reset
     ul{
         list-style: none;
     }
+
+    h1 b {
+        display: block;
+        font-size: 1.1rem;
+        border-bottom: .1rem solid red;
+        padding-bottom: .5rem;
+    }
 /*  */
 
 /* 
@@ -49,5 +56,18 @@ Nav
         display: -webkit-flex;
         display: -moz-flex;
         display: flex;
+    }
+/*  */
+
+/* 
+Form
+*/
+    input, button, textarea{
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 1rem;
+
+        transition: all .5s;
     }
 /*  */
