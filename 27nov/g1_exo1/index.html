@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>EXO 1 : formulaire JS</title>
+    </head>
+    <body>
+        
+        <!-- 
+            Un formulaire émet un événement "submit" qu'il faut capter en javascript :
+            - ELEMENT.addEventListener('submit')
+            - Penser à bloquer le comportement naturel du fromulaire
+                - ELEMENT.addEventListener('submit', event => { event.preventDefault() })
+                - singin.php?first_name=VALUE&last_name=VALUE&age=VALUE
+        -->
+        <form action="singin.php" method="post">
+            <label for="first_name">Prénom</label>
+            <input type="text" name="first_name">
+
+            <label for="last_name">Nom</label>
+            <input type="text" name="last_name">
+
+            <label for="age">Age</label>
+            <input type="text" name="age">
+
+            <!-- 
+                Un click sur le bouton émet l'événement "submit" du formulaire
+                - Il faut vérifier la taille de la valeur de chaque input (ou textarea, ou...)
+                    ELEMENT.value.length
+                - Si les input ont de la valeur alors valider le formulaire et vider les inputs
+                  sinon afficher un message d'erreur
+            -->
+            <button type="submit">Valider</button>
+        </form>
+
+        <!-- 
+            Ajouter une balise pour afficher les messages d'erreur
+            - ELEMENT.textContent = '...' ou ELEMENT.innerHtml = '...'
+        -->
+        <p id="formMessage"></p>
+
+        <!-- 
+            Intégrer le script juste avant la fin du body car un script Javascript s'exécute sur des balises HTML
+        -->
+        <script src="./js/main.js"></script>
+    </body>
+</html>
