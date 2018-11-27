@@ -20,14 +20,14 @@ Attendre le chargement du DOM
             const activateForm = () => {
                 // Capter le submit (event) sur le formulaire (myForm)
                 myForm.addEventListener('submit', (event) => {
+                    // Bloquer le comportement naturel du formulaire
+                    event.preventDefault();
+
                     // Réinitialiser les messages d'erreur
                     errorMessage.innerHTML = '';
 
                     // Initaliser une variable pour les erreurs
                     let formError = 0;
-
-                    // Bloquer le comportement naturel du formulaire
-                    event.preventDefault();
 
                     // Vérifier le nombre de caractères dans la valeur de userEmail
                     if( userEmail.value.length <= 4 ){

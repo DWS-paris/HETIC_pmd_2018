@@ -15,6 +15,9 @@ Imports & declaration
 
     // Créer une variable pour le serveur
     const server = express();
+
+    // Importer le router princial
+    const { mainRouter } = require('./routes/main.router');
 //
 
 /* 
@@ -30,7 +33,10 @@ Server config
 
             // Configurer le dossier pour les vues client
             server.set( 'views', __dirname + '/www' );
-            server.use( express.static( path.join(__dirname, '/www') ) );
+            server.use( express.static( path.join(__dirname, '/www') ) )
+
+            // Configurer le router
+            server.use('/', mainRouter);
 
             // Lancer le serveur
             this.launch()
