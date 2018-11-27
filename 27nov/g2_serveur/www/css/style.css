@@ -1,3 +1,362 @@
-h1{
-    color: red;
-}
+/* 
+Reset
+*/
+    @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+    @import url('./system-font-css.css');
+
+    *{
+        /* Gestion de la taille des blocs */
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+
+        /* Suppression des marges */
+        padding: 0;
+        margin: 0;
+    }
+
+    html{
+        /* Configuration de la valeur 1rem = 10px */
+        font-size: 62.5%;
+    }
+
+    body{
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+        font-size: 1.5rem;
+        background: #fafafa;
+    }
+
+    em{
+        font-style: normal;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    [target="blank"]:hover{
+        text-decoration: underline;
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    b{
+        font-weight: 500;
+    }
+
+    fieldset{
+        border: none;
+    }
+
+    input, button {
+        font-size: 1.6rem;
+
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+
+        -webkit-border-radius: .3rem;
+        border-radius: .3rem;
+    }
+
+    input {
+        font-weight: 100;
+        color: #262626;
+
+        border: .1rem solid #e6e6e6;
+        background: #fafafa;
+
+        padding: 1rem; 
+    }
+
+    button{
+        font-weight: 500;
+        color: white;
+        background: #3897f0;
+        border: none;
+        padding: .5rem; 
+    }
+/**/
+
+
+
+/* 
+Style Header
+*/
+    header {
+        font-size: .9rem;
+        text-transform: uppercase;
+        text-align: center;
+        color: #c7c7c7;
+        margin: 2rem auto;
+    }
+
+    header a{
+        color: #333
+    }
+
+    header aside {
+        position: fixed;
+        top: 100vh;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(255, 255, 255, .5);
+        z-index: 1000;
+        color: black;
+        font-size: 1.5rem;
+        opacity: 0;
+
+        -moz-transition: opacity .3s;
+        -webkit-transition: opacity .3s;
+        transition: opacity .3s;
+    }
+
+    header aside.open{
+        top: 0vh;
+        opacity: 1;
+    }
+
+    header aside div {
+        width: 40rem;
+        background: white;
+        box-shadow: 0 0 1rem grey;
+        position: absolute;
+        top: 10rem;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 2rem 2rem 2.5rem 2rem;
+        text-transform: none;
+    }
+
+    header h1 {
+        text-transform: uppercase;
+        color: #3897f0;
+    }
+
+    #connectedUserEmail{
+        color: #3897f0;
+    }
+/**/
+
+
+/* 
+Style Main
+*/
+    main{
+        text-align: center;
+        max-width: 93rem;
+        margin: 0 auto 5rem auto;
+
+        display: -webkit-flex;
+        display: flex;
+
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    main section{
+        -webkit-flex: 1;
+        flex: 1;
+    }
+    
+    [alt="Logo Instagram"] {
+        width: 65%;
+        display: block;
+        margin: 0 auto 1.5rem auto;
+    }
+
+    main section article:not(:last-of-type){
+        border: .1rem solid #e6e6e6;
+        background: white;
+        padding: 2.5rem;
+        margin-bottom: 1rem;
+
+        -webkit-border-radius: .1rem;
+        border-radius: .1rem;
+    }
+
+    /* Slider */
+    main section:first-of-type{
+        display: none;
+
+        width: 45rem;
+        height: 61rem;
+        margin: auto;
+        position: relative;
+        background-image: url('../img/png/backPhone.png');
+        background-position: right;
+        background-repeat: no-repeat;
+
+        -webkit-flex: 1.3;
+        flex: 1.3;
+    }
+
+    main ul {
+        width: 24rem;
+        height: 42.7rem;
+        position: absolute;
+        right: 6.3rem;
+        bottom: 8.8rem;
+    }
+
+    main section:first-of-type li{
+        position: absolute;
+    }
+
+    main section:first-of-type li:not(:first-of-type){
+        display: none;
+    }
+
+    main p a{
+        color: #3897f1;
+    }
+
+    /* Formulaire */
+    main section:last-of-type {
+        margin: 0 3rem;
+    }
+
+    main aside{
+        color: #999
+    }
+
+    main aside a{
+        display: block;
+    }
+
+    main aside p{
+        text-transform: uppercase;
+        position: relative;
+        margin: 1.5rem auto 2rem auto;
+    }
+
+    main aside p::before {
+        content: '';
+        position: absolute;
+        top: .9rem;
+        left: 0;
+        width: 100%;
+        height: .1rem;
+        background: #999;
+    }
+
+    main aside p b {
+        background: white;
+        position: relative;
+        z-index: 1;
+        padding: 0 1rem;
+    }
+
+    main aside a:first-of-type{
+        color: #385185;
+        margin-bottom: 1.5rem;
+    }
+
+    main aside a:last-of-type{
+        font-size: .8em;
+        color: #003569;
+    }
+
+    /* Zone téléchargement */
+    main article:last-of-type em {
+        color: #262626;
+        display: block;
+        margin: 2rem auto 1.5rem auto;
+    }
+
+    main article:last-of-type img{
+        width: 13rem;
+    }
+
+    button + p {
+        color: red;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+/**/
+
+/* 
+Style Footer
+*/
+    footer{
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        color: #999;
+
+        max-width: 93rem;
+        margin: auto;
+
+        position: relative;
+    }
+
+    footer li{
+        display: inline-block;
+    }
+
+    footer li:last-of-type{
+        display: block;
+    }
+
+    footer li{
+        margin: .5rem 1rem; 
+    }
+
+    footer a{
+        color: #003569;
+    }
+
+    footer select {
+        color: #003569;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border: none;
+
+        /* Supprimer les fèches du select */
+        -webkit-appearance: none;
+    }
+/**/
+
+/* 
+Requêtes média
+*/
+    @media screen and (min-width: 890px) {
+        
+        /* Style main */
+        main section:first-of-type {
+            display: initial;
+        }
+
+        main section:last-of-type {
+            margin: 0 7rem 0 0;
+        }
+
+        /* Style Footer */
+        footer{
+            text-align: left;
+        }
+
+        footer li{
+            margin: 0; 
+        }
+
+        footer li:not(:last-of-type){
+            margin-right: .7rem;
+        }
+
+        footer li:last-of-type{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+/**/

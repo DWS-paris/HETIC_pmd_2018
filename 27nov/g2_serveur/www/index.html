@@ -2,12 +2,112 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+        <title>Instagram</title>
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" href="./img/ico/ico.ico">
     </head>
     <body>
-        <h1>Hello  Node</h1>
+        <!-- 
+            Ouverture de page
+            Ajout d'un header pour identifier la page 
+        -->
+        <header>
+            <em>Réalisation d'une copie de la page de connexion du site <a href="https://www.instagram.com/" target="blank">Instagram</a></em>
+            <!-- Ajout d'une aside pour la popin -->
+            <aside id="popin">
+                <div>
+                    <h1>Bienvenue sur Instagram !</h1>
+                    <p>Vous êtes connecté avec l'email <span id="connectedUserEmail"></span></p>
+                </div>
+            </aside>
+        </header>
+        
+        <!-- 
+            Contenu principal de la page
+            La balise main contient tous les éléments de contenus principaux
+        -->
+        <main>
+            <!-- Ajout d'une section pourle slider -->
+            <section>
+                <ul>
+                    <li><img src="./img/jpg/1.jpg" alt="Vue de la page profil"></li>
+                </ul>
+            </section>
+
+            <!-- Ajout d'une section pour le formulaire -->
+            <section>
+                <!-- Article principal : formulaire -->
+                <article>
+                    <img src="./img/svg/logo_instagram.svg" alt="Logo Instagram">
+
+                    <!-- Ajout des ID's pour le Javascript -->
+                    <form action="#" id="connexionForm">
+                        <fieldset>
+                            <input type="email" placeholder="Adresse email" id="userEmail">
+                            <input type="password" placeholder="Mot de passe" id="userPassword">
+                            <button type="submit">Se connecter</button>
+                            <p id="errorMessage"></p>
+                        </fieldset>
+
+                        <!-- 
+                            Contenu annexe
+                            La balise aside permet d'identifier un contenu qui n'est pas essentiel
+                        -->
+                        <aside>
+                            <p><b>Ou</b></p>
+                            <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i> Se connecter avec Facebook</a>
+                            <a href="#">Mot de passe oublie ?</a>
+                        </aside>
+                    </form>
+
+                </article>
+
+                <!-- Créer un compte -->
+                <article>
+                    <p>Vous n'avez pas de compte ? <a href="#">Inscrivez-vous</a></p>
+                </article>
+
+                <!-- Télécharger l'application mobile -->
+                <article>
+                    <em>Télécharger l’application.</em>
+                    <a href="https://itunes.apple.com/app/instagram/id389801252?pt=428156&ct=igweb.loginPage.badge&mt=8" target="blank"><img src="./img/png/appleStore.png" alt="Logo Apple Store"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26utm_medium%3Dbadge" target="blank"><img src="./img/png/googlePlay.png" alt="Logo Google Play"></a>
+                </article>
+            </section>
+        </main>
+
+        <!-- 
+            Fermeture de la page
+            Le footer permet de délimiter la fin de la page
+        -->
+        <footer>
+            <ul>
+                <li><a href="https://www.instagram.com/about/us/">À propos de nous</a></li>
+                <li><a href="https://help.instagram.com/">Support</a></li>
+                <li><a href="http://blog.instagram.com/">Blog</a></li>
+                <li><a href="https://instagram-press.com/">Presse</a></li>
+                <li><a href="https://www.instagram.com/developer/">API</a></li>
+                <li><a href="https://www.instagram.com/about/jobs/">Emplois</a></li>
+                <li><a href="https://www.instagram.com/legal/privacy/">Confidentialité</a></li>
+                <li><a href="https://www.instagram.com/legal/terms/">Condition</a></li>
+                <li><a href="https://www.instagram.com/explore/locations/">Répertoire</a></li>
+                <li>
+                    <select>
+                        <option value="null">LANGUE</option>
+                        <option value="fr">Français</option>
+                        <option value="en">Anglais</option>
+                    </select>
+                </li>
+                <li><em>&copy; 2017 Instagram</em></li>
+            </ul>
+        </footer>
+
+        <!-- Intégration du CDN jQuery -->
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        
+        <!-- Intégration du script de la page -->
+        <script src="./js/script.js"></script>
     </body>
 </html>
