@@ -1,0 +1,17 @@
+nav{
+    border: .1rem solid blue;
+}
+
+nav li{
+    display: inline-block;
+}
+
+nav ul{
+    position: relative; /* Bloquer les enfants dans le parent */
+}
+
+nav loi:last-child {
+    position: absolute;
+    right: 0;
+    top: 0;
+}

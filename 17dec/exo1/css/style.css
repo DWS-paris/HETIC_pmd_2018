@@ -1,0 +1,40 @@
+main{
+    border: 1rem solid blue;
+    width: 500px; 
+    height: 300px; 
+    margin: 6rem auto;
+
+    position: relative; /* Bloquer les enfant dans le parent */
+}
+
+section{
+    background-color: black;
+    color: white;
+
+    width: 50px; 
+    height: 50px;
+}
+
+section:first-child {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+section:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+section:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+section:nth-child(4) {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
