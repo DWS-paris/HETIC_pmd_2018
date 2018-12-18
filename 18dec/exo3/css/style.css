@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Intégrer le padding et les border dans la taille des boites */
+}
+
+html{
+    font-size: 62.5%
+}
+
+body{
+    font-size: 1.5rem;
+}
+
+main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    font-size: 7rem;
+}
+
+
+ul {
+    margin: auto;
+    list-style: none;
+    width: 50rem;
+    line-height: 1;
+}
+
+li{
+    display: inline-block
+}
+
+li:first-child {
+    width: 100%;
+    font-size: .5em;
+    text-decoration: line-through;
+}
+
+li:nth-child(2) {
+    font-size: .5em;
+    border: .2rem solid black;
+    padding: 2rem;
+}
+
+li:last-child {
+    font-weight: 900;
+    position: relative;
+    top: 1rem;
+}

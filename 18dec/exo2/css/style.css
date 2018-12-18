@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Intégrer le padding et les border dans la taille des boites */
+}
+
+html{
+    font-size: 62.5%
+}
+
+body{
+    font-size: 1.5rem;
+}
+
+main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    font-size: 7rem;
+}
+
+
+p {
+    margin: auto;
+    text-transform: uppercase;
+    padding: 2rem 20rem;
+    position: relative;
+}
+
+p::before, p::after {
+    content: '';
+    display: inline-block;
+    height: .4rem;
+    width: 25rem;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+}
+
+p::after {
+    right: -15rem;
+}
+
+p::before {
+    left: -15rem;
+}

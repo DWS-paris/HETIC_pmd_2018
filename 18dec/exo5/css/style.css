@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Intégrer le padding et les border dans la taille des boites */
+}
+
+html{
+    font-size: 62.5%
+}
+
+body{
+    font-size: 1.5rem;
+}
+
+button{
+    font-size: 3rem;    
+}
+
+main {
+    display: flex;
+    max-width: 90rem;
+    height: 100vh;
+    font-size: 3rem;
+    margin: auto;
+    border: .1rem solid green;
+}
+
+ul {
+    margin: auto;
+    list-style: none;
+    width: 100%;
+    position: relative;
+    padding: 0 4rem;
+}
+
+li {
+    width: calc(33.333% - .5rem);
+    height: 45rem;
+    background: red;
+    display: inline-block;
+}
+
+li:last-child {
+    background: transparent;
+    position: absolute;
+    height: auto;
+    width: 100%;
+    top: 45%;
+    left: 0;
+}
+
+i.fas.fa-chevron-right {
+    position: absolute;
+    right: 0;
+}
