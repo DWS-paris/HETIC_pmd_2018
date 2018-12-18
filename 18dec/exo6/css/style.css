@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Intégrer le padding et les border dans la taille des boites */
+}
+
+html{
+    font-size: 62.5%
+}
+
+body{
+    font-size: 1.5rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+figure {
+    position: relative;
+    width: 40rem;
+}
+
+img:hover + figcaption, figcaption:hover{
+    opacity: 1;
+    top: 50%;
+}
+
+
+figcaption {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 3rem;
+    font-size: 3rem;
+    box-shadow: 0 0 1rem black;
+    opacity: 0;
+    transition: all .3s;
+}
