@@ -1,0 +1,101 @@
+/* 
+Reset
+*/
+    *{
+        margin: 0;
+        padding: 0;
+
+        box-sizing: -webkit-border-box;
+        box-sizing: border-box;
+    }
+
+    html{
+        font-size: 62.5%;
+    }
+
+    body{
+        font-size: 1.5rem;
+        font-family: sans-serif;
+        background-color: #000530;
+    }
+
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+    ul{
+        list-style: none;
+    }
+/**/
+
+/* 
+Layout
+*/
+    header, main, footer{
+        max-width: 78rem;
+        margin: auto;
+    }
+/**/
+
+/* 
+Header
+*/
+    header{
+        background-color: #c70829;
+        text-align: center;
+        
+        -webkit-border-radius: .5rem;
+        -moz-border-radius: .5rem;
+        border-radius: .5rem;
+    }
+
+    header li {
+        display: inline-block;
+    }
+
+    header ul{
+        margin: 2rem auto
+    }
+
+    header ul:first-of-type a {
+        background: rgba(0, 0, 0, .5);
+        color: white;
+        padding: .5rem 1rem;
+
+        -webkit-border-radius: .5rem;
+        -moz-border-radius: .5rem;
+        border-radius: .5rem;
+    }
+
+    header ul:first-of-type li:last-child a {
+        background: black;
+        margin-left: 6rem;
+    }
+
+    header section {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    header section:first-child {
+        width: 30%;
+    }
+
+    header section:last-child {
+        width: 69%;
+        text-align: right;
+    }
+/**/
+
+/* 
+Main
+*/
+    main{
+        background-color: white;
+    }
+/**/

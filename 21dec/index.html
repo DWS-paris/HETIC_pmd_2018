@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #buyProduct, #promotions{
+            display: none;
+        }
+
+        #buyProduct.active, #promotions.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <li><a href="#buyProduct">Acheter produit</a></li>
+            <li><a href="#promotions">Promotions</a></li>
+            <!-- Autre lins -->
+        </nav>
+
+        <ul id="buyProduct">
+            <li><a href="#">Nouveautés</a></li>
+        </ul>
+
+        <ul id="promotions">
+            <li><a href="#">Pour noel</a></li>
+        </ul>
+    </header>
+
+    <script>
+    
+        // Créer un tableau avec tous les liens de la nav
+        let myNavLinks = document.querySelectorAll('nav a');
+
+        // Faire une boucle sur le tableau de liens
+        for( let item of myNavLinks ){
+            // Capter le click sur les liens
+            item.addEventListener('click', function(event){
+                event.preventDefault();
+
+                // Récupérer la valeur de l'attibut href
+                let subMenu = item.getAttribute('href');
+
+                // Afficher le sous menu
+                document.querySelector(subMenu).classList.add('active')
+            })
+        }
+    
+    </script>
+</body>
+</html>
