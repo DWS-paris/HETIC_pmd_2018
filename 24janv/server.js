@@ -23,8 +23,7 @@ Configuration
     server.use( express.static(path.join(__dirname, 'www')) );
 
     // Config du moteur de rendu
-    server.engine( 'html', ejs.renderFile );
-    server.set( 'view engine', 'html' );
+    server.set( 'view engine', 'ejs' );
 
     // Config routes
     server.use( '/api', apiRouter );
