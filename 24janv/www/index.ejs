@@ -13,7 +13,18 @@
         <main>
             
             <!-- Afficher les données de la route -->
-            <%= data[0].content  %>
+            <ul>
+                <!-- Boucle EJS -->
+                <% for( let item of data ) { %>
+                    <li
+                        <% if(item.isDone) { %>
+                        class="isDone"
+                        <% } %>
+                    > 
+                        <%= item.content %> 
+                    </li>
+                <% } %>
+            </ul>
 
         </main>
 
