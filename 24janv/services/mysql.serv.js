@@ -67,7 +67,7 @@ Config
                             connection.end();
 
                             // Résoudre le résultat
-                            return resolve( { data: results, fields: fields } )
+                            return resolve( { results: results, fields: fields } )
                         }
                     });
                     
