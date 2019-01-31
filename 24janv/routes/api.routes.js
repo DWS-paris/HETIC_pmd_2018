@@ -25,7 +25,7 @@ Définition
             {
                 _id: 2,
                 content: "Faire une requête API depuis le client",
-                isDone: false
+                isDone: true
             }
         ]
         
