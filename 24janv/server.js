@@ -6,6 +6,9 @@ Imports
     const path = require('path');
     const ejs = require('ejs');
 
+    //=> Services
+    const { connect } = require('./services/mysql.serv');
+
     //=> Routers
     const frontRouter = require('./routes/front.routes');
     const apiRouter = require('./routes/api.routes');
@@ -33,7 +36,15 @@ Configuration
 /* 
 Start
 */
-    server.listen( port, () => {
-        console.log( `Server is listening on port ${port}!` );
+    // Connexion à la BDD MySql
+    connect( 'localhost', '8889', 'root', 'root', 'hetic' )
+    .then( connexion => {
+        // Lancer le serveur
+        server.listen( port, () => {
+            console.log( `Server listening on port ${port}` );
+        });
+    })
+    .catch( err => {
+        console.log(err)
     });
 //

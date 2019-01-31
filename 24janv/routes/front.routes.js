@@ -1,8 +1,12 @@
 /* 
 Imports
 */
+    // Node
     const express = require('express');
     const frontRouter = express.Router();
+
+    // Inner
+    const { readData } = require('../services/mysql.serv');
 //
 
 /* 
@@ -29,8 +33,22 @@ Définition
             }
         ]
 
-        //=> Envoyer le fichier "index" dans la réponse avec des donnnées
-        res.render('index', { data: todoes });
+        // Utiliser la fonction readData pour charger le contenu depuis le BDD
+        readData('localhost', '8889', 'root', 'root', 'hetic')
+        .then( data => {
+            console.log(data);
+
+            //=> Envoyer le fichier "index" dans la réponse avec des donnnées
+            return res.render('index', { data: todoes });
+        })
+        .catch( err => {
+            console.error(err)
+
+            //=> Envoyer le fichier "index" dans la réponse avec des donnnées
+            return res.render('index', { data: todoes });
+        });
+
+        
     });
 
     //=> Todo page
